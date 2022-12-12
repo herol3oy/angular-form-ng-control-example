@@ -1,0 +1,8 @@
+  <span>{{ label }}</span>
+  <input
+    (blur)="onTouchedCallback()"
+    (input)="emitValueChange($event.target)"
+    [value]="value"
+    [type]="type"
+  />
+<error-message *ngIf="isInvalid"></error-message>
